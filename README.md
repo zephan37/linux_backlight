@@ -1,9 +1,12 @@
 # linux_backlight
 ## 解决笔记本下Linux的亮度问题
 个人电脑安装Linux时出现使用Fn无法调节亮度的问题，具体如下：
+
 1./sys/class/backlight下有两个与亮度相关文件夹，对于我来说是intel_backlight与panasonic
-3.使用xbacklight命令可以调节亮度
-2.使用Fn调节亮度时，/sys/class/backlight下的intel_backlight的brightness未被改变，但亮度调节主要与此相关。
+
+2.使用xbacklight命令可以调节亮度
+
+3.使用Fn调节亮度时，/sys/class/backlight下的intel_backlight的brightness未被改变，但亮度调节主要与此相关。
 
 解决方法：
 1.建立/etc/udev/rules.d/99-writeintelbacklight.rules这个文件，里面加上
